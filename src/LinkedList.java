@@ -79,4 +79,33 @@ public class LinkedList {
         }
     }
 
+    public void deleteFirst(){
+        head = head.next;
+        if(head==null)
+            tail=null;
+    }
+
+    public void deleteLast(){
+        if(head==null)
+            return;
+
+        else if(head.next==null) {
+            head = null;
+            tail = null;
+            size = 0;
+            return;
+        }
+
+        Node current = head;
+        while (current.next.next != null){// checking upto second last element
+            current = current.next; // moving current one by one
+            // now current is at second last
+
+
+        }
+        tail = current; // now second last points to tail
+        tail.next= null; // tail always points null
+        size--;
+    }
+
 }

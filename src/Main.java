@@ -9,6 +9,8 @@ public class Main {
         list.addLast(55);
         list.addLast(55);
         list.addatPos(190,1);
+        list.deleteFirst();
+        list.deleteLast();
         list.display();
     }
 }
