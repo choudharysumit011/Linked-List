@@ -37,10 +37,13 @@ public class LinkedList {
 
     public void display(){
         Node temp = head;
+        System.out.print("Head->");
         while (temp != null){
-            System.out.println(temp.value + "->");
+
+            System.out.print(temp.value + "->");
             temp = temp.next;
         }
+        System.out.print("Tail");
        // temp = temp.next;
 
     }
@@ -106,6 +109,29 @@ public class LinkedList {
         tail = current; // now second last points to tail
         tail.next= null; // tail always points null
         size--;
+    }
+
+    public void deleteAtPos(int index){
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("Index out of bounds");
+        }
+
+        if (index == 0) {
+            // If deleting the first node
+            head = head.next;
+            size--;
+            return;
+        }
+        Node temp = head;
+
+        for(int i=0; i< index-1;i++){
+            temp = temp.next;
+             // this is one pos before that index
+        }
+        temp.next = temp.next.next; // we pointed it to one index aheadf
+        size--;
+
+
     }
 
 }

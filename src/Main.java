@@ -6,11 +6,14 @@ public class Main {
         list.addFirst(4);
         list.addFirst(12);
         list.addFirst(78);
-        list.addLast(55);
-        list.addLast(55);
-        list.addatPos(190,1);
-        list.deleteFirst();
-        list.deleteLast();
+        list.addLast(59);
+        list.deleteAtPos(1);
         list.display();
+        DoublyLinkedList list2 = new DoublyLinkedList();
+        list2.addFirst(22);
+        list2.addFirst(88);
+        list2.addFirst(83);
+        list2.addLast(12);
+        list2.display();
     }
 }
